@@ -8,8 +8,7 @@ API_KEY = "YOUR_OPENWEATHERMAP_API_KEY'
 def get_weather(city):
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric&lang=fr'
     response = requests.get(url)
-    weather_data = response.json()
-    return weather_data
+    return response.json()
 
 # Display weather with Tkinter
 def show_weather():
